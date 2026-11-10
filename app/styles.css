@@ -1,0 +1,35 @@
+* { box-sizing: border-box; }
+:root { color-scheme: light; font-family: system-ui, sans-serif; color: #172934; background: #f5f8fa; }
+body { margin: 0; }
+a { color: #145f6a; text-underline-offset: .2em; }
+a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible {
+  outline: 3px solid #287c91; outline-offset: 3px;
+}
+.site-header { padding: 1rem max(1.25rem, calc((100vw - 46rem) / 2)); background: #163745; }
+.site-header a { color: #fff; font-weight: 700; text-decoration: none; }
+main { max-width: 48.5rem; margin: 2.5rem auto; padding: 0 1.25rem; }
+.heading, .actions { display: flex; align-items: center; gap: 1rem; flex-wrap: wrap; }
+.heading { justify-content: space-between; margin-bottom: 1.25rem; }
+h1 { margin: 0 0 1.25rem; line-height: 1.2; }
+.heading h1 { margin: 0; }
+h2 { margin: 0; font-size: 1.1rem; }
+button, input, textarea { font: inherit; }
+.button, button.danger { padding: .55rem .85rem; border: 1px solid transparent; border-radius: .35rem; cursor: pointer; }
+.button { background: #145f6a; color: white; font-weight: 650; text-decoration: none; }
+button.danger { background: white; color: #9b2525; border-color: #e3bdbd; }
+button:disabled { opacity: .65; cursor: wait; }
+form, .empty, .tasks { background: white; border: 1px solid #ced9de; border-radius: .5rem; }
+form, .empty { padding: 1.2rem; }
+label { display: block; margin-bottom: .4rem; font-weight: 650; }
+label span, small { color: #52656d; font-weight: 400; }
+input, textarea { width: 100%; padding: .6rem; border: 1px solid #879da6; border-radius: .35rem; margin-bottom: 1rem; }
+textarea { resize: vertical; }
+.tasks { list-style: none; margin: 0; padding: 0; }
+.tasks li { display: flex; justify-content: space-between; align-items: flex-start; gap: 1rem; padding: 1rem 1.2rem; }
+.tasks li + li { border-top: 1px solid #ced9de; }
+.task-copy { min-width: 0; overflow-wrap: anywhere; }
+.task-copy p { margin: .35rem 0; white-space: pre-wrap; }
+.tasks .actions { flex-shrink: 0; }
+.success { color: #185e39; }
+.error { color: #9b2525; }
+@media (max-width: 480px) { .tasks li { flex-direction: column; } }
